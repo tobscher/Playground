@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  abbreviation: CTR
+  name: Coleotrack
+  description: MyText
+
+two:
+  abbreviation: TE
+  name: Test
+  description: Custom description

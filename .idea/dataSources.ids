@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails test2011: test" product="" version="" jdbc-version="" driver-version="" uuid="c91e7b08-be40-4793-9311-0640d7115e85">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:/home/thaar/Dokumente/dev/test2011/db/test.sqlite3</jdbc-url>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/sqlitejdbc-v056.jar</url>
+      </library>
+    </libraries>
+  </data-source>
+  <data-source source="LOCAL" name="Rails test2011: development" product="SQLite" version="3.6.3" jdbc-version="2.1" driver-version="native" uuid="10e495be-69e9-4f4d-9ee1-f0e90b087f67">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:/home/thaar/Dokumente/dev/test2011/db/development.sqlite3</jdbc-url>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/sqlitejdbc-v056.jar</url>
+      </library>
+    </libraries>
+    <table name="ISSUES" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="title" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="description" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="project_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <primary-key columns="id" />
+    </table>
+    <table name="PROJECTS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="abbreviation" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="description" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <primary-key columns="id" />
+    </table>
+    <table name="SCHEMA_MIGRATIONS" schema="" catalog="" type="TABLE">
+      <column name="version" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+    </table>
+    <table name="SQLITE_SEQUENCE" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="seq" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+    </table>
+    <table name="USERS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="email" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="encrypted_password" sqlType="VARCHAR(128)" length="2000000000" precision="10" nullable="false" jdbcType="12" />
+      <column name="reset_password_token" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="reset_password_sent_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="remember_created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="sign_in_count" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="current_sign_in_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="last_sign_in_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="current_sign_in_ip" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="last_sign_in_ip" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12" />
+      <primary-key columns="id" />
+    </table>
+  </data-source>
+</component>
