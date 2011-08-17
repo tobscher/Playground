@@ -6,6 +6,13 @@
 	font-family: "Segoe UI", Tahoma, Arial, Verdana, Helvetica, Sans-Serif;
 }
 
+.round
+{
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+}
+
 body
 {
 	background-color: #ffffff;
@@ -99,11 +106,13 @@ textarea
 
 #content h1
 {
-	color: #3376D7;
+	color: #ffffff;
 	font-size: 15pt;
 	font-weight: normal;
-	width: 100%;
 	text-transform: lowercase;
+    background-color: #3376D7;
+    padding: 0.5em;
+    margin: 0 5px 10px 0;
 }
 
 .notice

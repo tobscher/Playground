@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110816105634) do
+ActiveRecord::Schema.define(:version => 20110817074825) do
 
   create_table "issues", :force => true do |t|
     t.string   "title"
@@ -27,6 +27,9 @@ ActiveRecord::Schema.define(:version => 20110816105634) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "projects", ["abbreviation"], :name => "index_projects_on_abbreviation", :unique => true
+  add_index "projects", ["name"], :name => "index_projects_on_name", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
