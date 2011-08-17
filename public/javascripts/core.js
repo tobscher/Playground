@@ -1,11 +1,11 @@
 $(document).ready(function() {
-    $(".check_all").click(function() {
+    $(".check_all").live("click", function() {
        var b = ($(this).is(":checked"));
 
        ToggleAll(b);
     });
 
-    $(".single_check").click(function() {
+    $(".single_check").live("click", function() {
         if (AllChecked())
         {
             $(".check_all").attr("checked", "checked");
@@ -59,4 +59,26 @@ function AllChecked()
     });
 
     return result;
+}
+
+function Destroy(url)
+{
+    var data = $(':input[name="id[]"]').serializeArray();
+
+    console.log(data);
+
+    $.ajax({
+        url: url,
+        data: data,
+        type: "post",
+        success: function(result) {
+            $(".list").html(result);
+        },
+        error: function(xhr, status, x)
+        {
+            console.log(xhr);
+            console.log(status);
+            console.log(x);
+        }
+    });
 }

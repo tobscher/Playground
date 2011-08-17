@@ -5,6 +5,9 @@ Test2011::Application.routes.draw do
 
   get "pages/about"
 
+  post "issues/destroy_async"
+  get "issues/list_async"
+
   resources :issues
 
   resources :projects

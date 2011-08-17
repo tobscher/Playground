@@ -1,31 +1,9 @@
 <h1 class="round">Listing issues</h1>
 
-<table>
-  <tr>
-    <td><%= check_box_tag("check_all", -1, false, :class => "check_all") %></td>
-    <td></td>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Project</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @issues.each do |issue| %>
-  <tr>
-    <td><%= check_box_tag("check", issue.id, false, :class => "single_check") %></td>
-    <td><%= issue.combined_name %></td>
-    <td><%= issue.title %></td>
-    <td><%= issue.description %></td>
-    <td><%= issue.project_id %></td>
-    <td><%= link_to 'Show', issue %></td>
-    <td><%= link_to 'Edit', edit_issue_path(issue) %></td>
-    <td><%= link_to 'Destroy', issue, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
+<div class="list">
+  <%= render :partial => "list" %>
+</div>
 
 <%= link_to 'New Issue', new_issue_path %>
+
+<%= link_to "Delete selected", "javascript:Destroy('#{issues_destroy_async_path}');" %>

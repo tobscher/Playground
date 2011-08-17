@@ -83,4 +83,22 @@ class IssuesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def destroy_async
+    ids = params[:id]
+
+    @issues = Issue.find_all_by_id(ids)
+
+    @issues.each do |i|
+      i.destroy
+    end
+
+    redirect_to issues_list_async_path
+  end
+
+  def list_async
+    @issues = Issue.all
+    
+    render :partial => "list", :layout => false
+  end
 end
